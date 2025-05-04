@@ -1,10 +1,10 @@
-# 🧠 The Relationship Ledger — Judge Connections with Clarity
+# The Relationship Ledger — Judge Connections with Clarity
 
 **A self-awareness and connection audit tool for personal alignment, pattern recognition, and relational discernment.**
 
 ---
 
-## 🔍 Purpose
+## Purpose
 
 _The Relationship Ledger_ is a web-based platform designed to help users understand themselves and evaluate the quality of their connections—personal, romantic, familial, or professional.
 
@@ -14,7 +14,7 @@ By blending the strategic insights of **Human Design**, **Zodiac Natal Charts**,
 
 ---
 
-## 💡 Philosophy
+## Philosophy
 
 - **Start with Self** – Understand your personal blueprint first.
 - **Track Connections with Discipline** – Relationships are investments.
