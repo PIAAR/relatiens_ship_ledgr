@@ -78,3 +78,16 @@ relatien/
 │   └── ...
 ├── README.md
 └── LICENSE
+
+
+Acknowledgements
+Zodiac charting powered by Flatlib
+
+Human Design references from HumanDesign.tools and Jovian Archive
+
+MBTI logic based on 16personalities.com
+
+
+📜 License
+© 2025 RMoor Industries. All rights reserved.
+Licensed for private use under Legacy Ledger License.
