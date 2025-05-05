@@ -1,0 +1,436 @@
+{
+    "Sun": {
+        "ARI": [
+            "Bold",
+            "Independent",
+            "Energetic"
+        ],
+        "TAU": [
+            "Grounded",
+            "Reliable",
+            "Pleasure-seeking"
+        ],
+        "GEM": [
+            "Curious",
+            "Talkative",
+            "Mentally Agile"
+        ],
+        "CAN": [
+            "Nurturing",
+            "Protective",
+            "Moody"
+        ],
+        "LEO": [
+            "Charismatic",
+            "Creative",
+            "Proud"
+        ],
+        "VIR": [
+            "Practical",
+            "Modest",
+            "Detail-oriented"
+        ],
+        "LIB": [
+            "Charming",
+            "Diplomatic",
+            "Peace-seeking"
+        ],
+        "SCO": [
+            "Intense",
+            "Private",
+            "Transformative"
+        ],
+        "SAG": [
+            "Adventurous",
+            "Philosophical",
+            "Blunt"
+        ],
+        "CAP": [
+            "Ambitious",
+            "Structured",
+            "Reserved"
+        ],
+        "AQU": [
+            "Innovative",
+            "Detached",
+            "Visionary"
+        ],
+        "PIS": [
+            "Empathic",
+            "Imaginative",
+            "Escapist"
+        ]
+    },
+    "Moon": {
+        "ARI": [
+            "Impulsive",
+            "Emotionally Direct",
+            "Restless"
+        ],
+        "TAU": [
+            "Emotionally Grounded",
+            "Comfort-driven",
+            "Slow to Anger"
+        ],
+        "GEM": [
+            "Witty",
+            "Changeable",
+            "Mentally Reactive"
+        ],
+        "CAN": [
+            "Sensitive",
+            "Protective",
+            "Sentimental"
+        ],
+        "LEO": [
+            "Proud",
+            "Warm-hearted",
+            "Attention-seeking"
+        ],
+        "VIR": [
+            "Anxious",
+            "Cautious",
+            "Emotionally Reserved"
+        ],
+        "LIB": [
+            "Peaceful",
+            "Harmonizing",
+            "Needs Connection"
+        ],
+        "SCO": [
+            "Intense",
+            "Emotionally Deep",
+            "Guarded"
+        ],
+        "SAG": [
+            "Optimistic",
+            "Restless",
+            "Emotionally Expansive"
+        ],
+        "CAP": [
+            "Stoic",
+            "Emotionally Responsible",
+            "Cautious"
+        ],
+        "AQU": [
+            "Detached",
+            "Idealistic",
+            "Unpredictable"
+        ],
+        "PIS": [
+            "Compassionate",
+            "Sensitive",
+            "Absorbing Emotions"
+        ]
+    },
+    "Asc": {
+        "ARI": [
+            "Direct",
+            "Action-first",
+            "Bold"
+        ],
+        "TAU": [
+            "Patient",
+            "Approachable",
+            "Grounded"
+        ],
+        "GEM": [
+            "Talkative",
+            "Observant",
+            "Quick-witted"
+        ],
+        "CAN": [
+            "Nurturing",
+            "Soft",
+            "Guarded"
+        ],
+        "LEO": [
+            "Dramatic",
+            "Magnetic",
+            "Proud"
+        ],
+        "VIR": [
+            "Humble",
+            "Helpful",
+            "Analytical"
+        ],
+        "LIB": [
+            "Polished",
+            "Charming",
+            "Fair"
+        ],
+        "SCO": [
+            "Mysterious",
+            "Intense",
+            "Reserved"
+        ],
+        "SAG": [
+            "Adventurous",
+            "Spontaneous",
+            "Playful"
+        ],
+        "CAP": [
+            "Structured",
+            "Serious",
+            "Composed"
+        ],
+        "AQU": [
+            "Eccentric",
+            "Innovative",
+            "Detached"
+        ],
+        "PIS": [
+            "Dreamy",
+            "Adaptable",
+            "Empathic"
+        ]
+    },
+    "Venus": {
+        "ARI": [
+            "Playful",
+            "Passionate",
+            "Impulsive"
+        ],
+        "TAU": [
+            "Sensual",
+            "Devoted",
+            "Possessive"
+        ],
+        "GEM": [
+            "Flirtatious",
+            "Witty",
+            "Curious"
+        ],
+        "CAN": [
+            "Romantic",
+            "Emotionally Giving",
+            "Caring"
+        ],
+        "LEO": [
+            "Generous",
+            "Expressive",
+            "Loyal"
+        ],
+        "VIR": [
+            "Selective",
+            "Loyal",
+            "Modest in Love"
+        ],
+        "LIB": [
+            "Romantic",
+            "Fair",
+            "Aesthetic-Driven"
+        ],
+        "SCO": [
+            "Intense",
+            "Sexual",
+            "Emotionally Fused"
+        ],
+        "SAG": [
+            "Free-loving",
+            "Playful",
+            "Open"
+        ],
+        "CAP": [
+            "Traditional",
+            "Reserved",
+            "Long-term Focused"
+        ],
+        "AQU": [
+            "Unconventional",
+            "Detached",
+            "Mentally Stimulated"
+        ],
+        "PIS": [
+            "Loving",
+            "Idealistic",
+            "Self-sacrificing"
+        ]
+    },
+    "Mars": {
+        "ARI": [
+            "Warrior-like",
+            "Competitive",
+            "Fast-acting"
+        ],
+        "TAU": [
+            "Persistent",
+            "Stubborn",
+            "Slow-burning"
+        ],
+        "GEM": [
+            "Verbally Assertive",
+            "Quick",
+            "Playful Aggression"
+        ],
+        "CAN": [
+            "Defensive",
+            "Emotionally Driven",
+            "Protective"
+        ],
+        "LEO": [
+            "Proud",
+            "Showy",
+            "Leader in Conflict"
+        ],
+        "VIR": [
+            "Precise",
+            "Calculating",
+            "Efficient"
+        ],
+        "LIB": [
+            "Fair Fighter",
+            "Tactful",
+            "Indecisive in Action"
+        ],
+        "SCO": [
+            "Strategic",
+            "Power-driven",
+            "Passionate"
+        ],
+        "SAG": [
+            "Impulsive",
+            "Blunt",
+            "Freedom Fighter"
+        ],
+        "CAP": [
+            "Goal-oriented",
+            "Disciplined",
+            "Slow to Anger"
+        ],
+        "AQU": [
+            "Disruptive",
+            "Detached Action",
+            "Innovative"
+        ],
+        "PIS": [
+            "Subtle",
+            "Emotionally Reactive",
+            "Spiritually Motivated"
+        ]
+    },
+    "Mercury": {
+        "ARI": [
+            "Fast Thinker",
+            "Argumentative",
+            "Blunt"
+        ],
+        "TAU": [
+            "Deliberate",
+            "Grounded",
+            "Thoughtful"
+        ],
+        "GEM": [
+            "Witty",
+            "Versatile",
+            "Information-driven"
+        ],
+        "CAN": [
+            "Emotionally Expressive",
+            "Subjective",
+            "Caring"
+        ],
+        "LEO": [
+            "Dramatic Communicator",
+            "Bold",
+            "Persuasive"
+        ],
+        "VIR": [
+            "Detail-Oriented",
+            "Pragmatic",
+            "Clear"
+        ],
+        "LIB": [
+            "Diplomatic",
+            "Balanced",
+            "Considerate"
+        ],
+        "SCO": [
+            "Penetrating",
+            "Private",
+            "Psychologically Sharp"
+        ],
+        "SAG": [
+            "Big-Picture Talker",
+            "Honest",
+            "Exaggerative"
+        ],
+        "CAP": [
+            "Strategic",
+            "Serious",
+            "Careful"
+        ],
+        "AQU": [
+            "Innovative",
+            "Detached",
+            "Quirky"
+        ],
+        "PIS": [
+            "Poetic",
+            "Imaginative",
+            "Illogical"
+        ]
+    },
+    "House7": {
+        "ARI": [
+            "Needs independence in partnership",
+            "Quick to bond",
+            "Direct lover"
+        ],
+        "TAU": [
+            "Seeks comfort and loyalty",
+            "Stable partner",
+            "Sensual"
+        ],
+        "GEM": [
+            "Needs variety",
+            "Playful bond",
+            "Mentally stimulating relationships"
+        ],
+        "CAN": [
+            "Emotionally deep bonds",
+            "Nurturing lover",
+            "Needs security"
+        ],
+        "LEO": [
+            "Needs admiration",
+            "Expressive partner",
+            "Loyal lover"
+        ],
+        "VIR": [
+            "Helpful partner",
+            "Needs order",
+            "Practical connection"
+        ],
+        "LIB": [
+            "Balance seeker",
+            "Romantic",
+            "Needs fairness"
+        ],
+        "SCO": [
+            "Craves deep fusion",
+            "Intense partner",
+            "Loyal to the core"
+        ],
+        "SAG": [
+            "Free-spirited relationships",
+            "Honest bond",
+            "Exploratory"
+        ],
+        "CAP": [
+            "Traditional partner",
+            "Reliable",
+            "Success-oriented"
+        ],
+        "AQU": [
+            "Detached partner",
+            "Needs space",
+            "Intellectual match"
+        ],
+        "PIS": [
+            "Spiritual connection",
+            "Romantic",
+            "Emotionally deep"
+        ]
+    }
+}
