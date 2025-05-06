@@ -1,5 +1,5 @@
 {
-    "Sun": {
+    "sun": {
         "ARI": [
             "Bold",
             "Independent",
@@ -61,7 +61,7 @@
             "Escapist"
         ]
     },
-    "Moon": {
+    "moon": {
         "ARI": [
             "Impulsive",
             "Emotionally Direct",
@@ -123,7 +123,7 @@
             "Absorbing Emotions"
         ]
     },
-    "Asc": {
+    "asc": {
         "ARI": [
             "Direct",
             "Action-first",
@@ -185,7 +185,7 @@
             "Empathic"
         ]
     },
-    "Venus": {
+    "venus": {
         "ARI": [
             "Playful",
             "Passionate",
@@ -247,7 +247,7 @@
             "Self-sacrificing"
         ]
     },
-    "Mars": {
+    "mars": {
         "ARI": [
             "Warrior-like",
             "Competitive",
@@ -309,7 +309,7 @@
             "Spiritually Motivated"
         ]
     },
-    "Mercury": {
+    "mercury": {
         "ARI": [
             "Fast Thinker",
             "Argumentative",
@@ -371,7 +371,689 @@
             "Illogical"
         ]
     },
-    "House7": {
+    "jupiter": {
+        "ARI": [
+            "Expands courage",
+            "Bold risk-taker",
+            "Leaps before thinking"
+        ],
+        "TAU": [
+            "Grows through stability",
+            "Values abundance",
+            "Steady learner"
+        ],
+        "GEM": [
+            "Seeks wisdom through ideas",
+            "Quick-minded",
+            "Loves variety"
+        ],
+        "CAN": [
+            "Expands emotional insight",
+            "Protective teacher",
+            "Nurtures through belief"
+        ],
+        "LEO": [
+            "Radiates optimism",
+            "Leads through vision",
+            "Shares joy generously"
+        ],
+        "VIR": [
+            "Grows through service",
+            "Seeks practical truth",
+            "Faith in the details"
+        ],
+        "LIB": [
+            "Expands fairness",
+            "Harmonizes through ideals",
+            "Believes in balance"
+        ],
+        "SCO": [
+            "Seeks depth of meaning",
+            "Transforms beliefs",
+            "Wise in crisis"
+        ],
+        "SAG": [
+            "Adventurous mind",
+            "Natural philosopher",
+            "Teacher and traveler"
+        ],
+        "CAP": [
+            "Believes in structure",
+            "Ambitious learner",
+            "Grows through discipline"
+        ],
+        "AQU": [
+            "Progressive ideals",
+            "Seeks collective wisdom",
+            "Visionary beliefs"
+        ],
+        "PIS": [
+            "Faith in the unseen",
+            "Spiritual wisdom",
+            "Empathic and dreamy"
+        ]
+    },
+    "saturn": {
+        "ARI": [
+            "Learns patience",
+            "Tests impulsiveness",
+            "Builds courage slowly"
+        ],
+        "TAU": [
+            "Faces resistance to change",
+            "Learns self-worth",
+            "Disciplined in resources"
+        ],
+        "GEM": [
+            "Confronts scattered thinking",
+            "Learns focus",
+            "Disciplines the mind"
+        ],
+        "CAN": [
+            "Tests emotional resilience",
+            "Learns boundaries with nurturing",
+            "Slow to trust"
+        ],
+        "LEO": [
+            "Confronts ego and pride",
+            "Disciplines expression",
+            "Builds authentic leadership"
+        ],
+        "VIR": [
+            "Learns not to over-perfect",
+            "Disciplined service",
+            "Tests self-criticism"
+        ],
+        "LIB": [
+            "Tests relationships",
+            "Learns fairness with limits",
+            "Disciplines diplomacy"
+        ],
+        "SCO": [
+            "Learns emotional control",
+            "Faces deep fears",
+            "Strength in transformation"
+        ],
+        "SAG": [
+            "Disciplines belief systems",
+            "Tests faith",
+            "Learns focus through philosophy"
+        ],
+        "CAP": [
+            "Master builder",
+            "Ambitious realist",
+            "Carries responsibility with pride"
+        ],
+        "AQU": [
+            "Tests ideals vs. reality",
+            "Disciplined innovator",
+            "Learns detachment wisely"
+        ],
+        "PIS": [
+            "Learns to structure dreams",
+            "Disciplines emotions",
+            "Tests faith and boundaries"
+        ]
+    },
+    "uranus": {
+        "ARI": [
+            "Bold innovator",
+            "Sudden impulses",
+            "Disruptive courage"
+        ],
+        "TAU": [
+            "Rebellious with resources",
+            "Innovates stability",
+            "Stubborn change-maker"
+        ],
+        "GEM": [
+            "Unconventional thinker",
+            "Erratic communicator",
+            "Intellectual rebel"
+        ],
+        "CAN": [
+            "Breaks family norms",
+            "Emotional awakenings",
+            "Detached nurturer"
+        ],
+        "LEO": [
+            "Radical self-expression",
+            "Innovative creator",
+            "Breaks tradition with flair"
+        ],
+        "VIR": [
+            "Revolutionary precision",
+            "Disrupts order to improve",
+            "Analytical innovator"
+        ],
+        "LIB": [
+            "Unorthodox relationships",
+            "Balances freedom and fairness",
+            "Social reformer"
+        ],
+        "SCO": [
+            "Breaks emotional barriers",
+            "Transforms through shock",
+            "Intensely independent"
+        ],
+        "SAG": [
+            "Freedom seeker",
+            "Breaks dogma",
+            "Progressive explorer"
+        ],
+        "CAP": [
+            "Innovates systems",
+            "Breaks hierarchical norms",
+            "Rebellious strategist"
+        ],
+        "AQU": [
+            "Quintessential rebel",
+            "Visionary thinker",
+            "Detached innovator"
+        ],
+        "PIS": [
+            "Mystical rebel",
+            "Intuitive disruptor",
+            "Dreams of a new world"
+        ]
+    },
+    "neptune": {
+        "ARI": [
+            "Dreams manifest through action",
+            "Impulsive idealism",
+            "Spiritual warrior"
+        ],
+        "TAU": [
+            "Grounded mysticism",
+            "Sensual dreamer",
+            "Spiritual connection to nature"
+        ],
+        "GEM": [
+            "Whimsical communicator",
+            "Imaginative intellect",
+            "Spiritual curiosity"
+        ],
+        "CAN": [
+            "Psychic sensitivity",
+            "Empathic nurturer",
+            "Emotional dreamer"
+        ],
+        "LEO": [
+            "Creative visionary",
+            "Inspired performer",
+            "Dreams of recognition"
+        ],
+        "VIR": [
+            "Service through healing",
+            "Practical mystic",
+            "Spiritual order-seeker"
+        ],
+        "LIB": [
+            "Harmony in ideals",
+            "Aesthetic mysticism",
+            "Spiritual partnership focus"
+        ],
+        "SCO": [
+            "Deep intuitive force",
+            "Transformational psychic",
+            "Spiritual intensity"
+        ],
+        "SAG": [
+            "Visionary explorer",
+            "Mystical truth-seeker",
+            "Dreams of freedom"
+        ],
+        "CAP": [
+            "Spiritual ambition",
+            "Practical mystic builder",
+            "Structured idealist"
+        ],
+        "AQU": [
+            "Cosmic thinker",
+            "Utopian dreamer",
+            "Detached spiritualist"
+        ],
+        "PIS": [
+            "Divine empath",
+            "Mystic soul",
+            "Boundless imagination"
+        ]
+    },
+    "pluto": {
+        "ARI": [
+            "Rebirth through courage",
+            "Power struggles with impulse",
+            "Transformative initiator"
+        ],
+        "TAU": [
+            "Transformation through stability",
+            "Possessive power",
+            "Silent strength"
+        ],
+        "GEM": [
+            "Mental rebirth",
+            "Powerful communicator",
+            "Obsessive thinker"
+        ],
+        "CAN": [
+            "Emotional alchemist",
+            "Transformative nurturer",
+            "Power rooted in memory"
+        ],
+        "LEO": [
+            "Dominant transformer",
+            "Creative power source",
+            "Rebirth through self-expression"
+        ],
+        "VIR": [
+            "Precision in transformation",
+            "Service-oriented rebirth",
+            "Analytical control"
+        ],
+        "LIB": [
+            "Power in balance",
+            "Charming influencer",
+            "Transformative partnerships"
+        ],
+        "SCO": [
+            "True Plutonian force",
+            "Master of transformation",
+            "Magnetic and intense"
+        ],
+        "SAG": [
+            "Truth-seeker reborn",
+            "Transformative beliefs",
+            "Power through vision"
+        ],
+        "CAP": [
+            "Strategic transformer",
+            "Structured power",
+            "Authority in rebirth"
+        ],
+        "AQU": [
+            "Revolutionary transformer",
+            "Detached but impactful",
+            "Power through innovation"
+        ],
+        "PIS": [
+            "Spiritual death and rebirth",
+            "Subtle control",
+            "Transformative compassion"
+        ]
+    },
+    "chiron": {
+        "ARI": [
+            "Wound in identity",
+            "Heals through courage",
+            "Empowers others to lead"
+        ],
+        "TAU": [
+            "Wound in self-worth",
+            "Heals through stability",
+            "Teaches grounded confidence"
+        ],
+        "GEM": [
+            "Wound in communication",
+            "Heals through expression",
+            "Guides others to speak truth"
+        ],
+        "CAN": [
+            "Wound in emotional safety",
+            "Heals through nurturing",
+            "Creates healing homes"
+        ],
+        "LEO": [
+            "Wound in recognition",
+            "Heals through creative self-love",
+            "Inspires authentic pride"
+        ],
+        "VIR": [
+            "Wound in perfectionism",
+            "Heals through service",
+            "Teaches holistic well-being"
+        ],
+        "LIB": [
+            "Wound in relationships",
+            "Heals through balance",
+            "Guides peaceful connections"
+        ],
+        "SCO": [
+            "Wound in trust",
+            "Heals through deep transformation",
+            "Empowers emotional truth"
+        ],
+        "SAG": [
+            "Wound in belief systems",
+            "Heals through exploration",
+            "Shares healing wisdom"
+        ],
+        "CAP": [
+            "Wound in achievement",
+            "Heals through inner validation",
+            "Models responsible growth"
+        ],
+        "AQU": [
+            "Wound in belonging",
+            "Heals through uniqueness",
+            "Empowers progressive healing"
+        ],
+        "PIS": [
+            "Wound in boundaries",
+            "Heals through compassion",
+            "Guides spiritual renewal"
+        ]
+    },
+    "true north node": {
+        "ARI": [
+            "Destined leader",
+            "Bold initiator",
+            "Learns self-reliance"
+        ],
+        "TAU": [
+            "Builds slowly",
+            "Seeks inner stability",
+            "Grounded pathfinder"
+        ],
+        "GEM": [
+            "Seeker of knowledge",
+            "Lifelong communicator",
+            "Messenger soul"
+        ],
+        "CAN": [
+            "Emotional rebirth",
+            "Nurturing growth",
+            "Family healer"
+        ],
+        "LEO": [
+            "Leads from heart",
+            "Expresses purpose",
+            "Born to shine"
+        ],
+        "VIR": [
+            "Service-driven",
+            "Seeks perfection",
+            "Practical destiny"
+        ],
+        "LIB": [
+            "Relationship builder",
+            "Seeks harmony",
+            "Diplomatic legacy"
+        ],
+        "SCO": [
+            "Transformative soul",
+            "Craves depth",
+            "Learns surrender"
+        ],
+        "SAG": [
+            "Philosopher path",
+            "Restless growth",
+            "Truth is the mission"
+        ],
+        "CAP": [
+            "Ambition is fate",
+            "Master of responsibility",
+            "Climbs karmic mountain"
+        ],
+        "AQU": [
+            "Innovator’s mission",
+            "Collective thinker",
+            "Breaks old systems"
+        ],
+        "PIS": [
+            "Spiritual evolution",
+            "Mystic journey",
+            "Healer through faith"
+        ]
+    },
+    "true south node": {
+        "ARI": [
+            "Instinctual leader",
+            "Past of fighting first",
+            "Comfort in initiating"
+        ],
+        "TAU": [
+            "Grounded legacy",
+            "Stuck in comfort and security",
+            "Sensual attachments"
+        ],
+        "GEM": [
+            "Talkative karmic path",
+            "Information-hoarder",
+            "Distracted mind patterns"
+        ],
+        "CAN": [
+            "Overly nurturing",
+            "Clings to emotional safety",
+            "Family-focused past"
+        ],
+        "LEO": [
+            "Past life of spotlight",
+            "Desire for praise",
+            "Drama as a pattern"
+        ],
+        "VIR": [
+            "Overcritical past",
+            "Attached to routines",
+            "Service-oriented comfort zone"
+        ],
+        "LIB": [
+            "Dependency on harmony",
+            "Avoided conflict",
+            "People-pleasing patterns"
+        ],
+        "SCO": [
+            "Mastered intensity",
+            "Emotional control issues",
+            "Power-holding karma"
+        ],
+        "SAG": [
+            "Escaped through philosophy",
+            "Wanderer spirit",
+            "Dogmatic tendencies"
+        ],
+        "CAP": [
+            "Workaholic tendencies",
+            "Success obsession",
+            "Rigid traditions"
+        ],
+        "AQU": [
+            "Detached karma",
+            "Lived for the collective",
+            "Avoided emotions"
+        ],
+        "PIS": [
+            "Self-sacrificing past",
+            "Escaped into dreams",
+            "Unclear boundaries"
+        ]
+    },
+    "true lilith": {
+        "ARI": [
+            "Rebel without fear",
+            "Sexual aggressor",
+            "Raw independence"
+        ],
+        "TAU": [
+            "Sensual and unapologetic",
+            "Possessive power",
+            "Pleasure as protest"
+        ],
+        "GEM": [
+            "Weaponized words",
+            "Seduction through intellect",
+            "Duality of expression"
+        ],
+        "CAN": [
+            "Maternal rebellion",
+            "Emotional manipulation",
+            "Wounded nurturer"
+        ],
+        "LEO": [
+            "Craves attention rebelliously",
+            "Wild performer",
+            "Shadow pride"
+        ],
+        "VIR": [
+            "Perfection as control",
+            "Sexual restraint or shame",
+            "Critical seductress"
+        ],
+        "LIB": [
+            "Charming disruptor",
+            "Manipulative fairness",
+            "Masked rage"
+        ],
+        "SCO": [
+            "Dark seduction",
+            "Taboo power",
+            "Sex = control"
+        ],
+        "SAG": [
+            "Free in body & mind",
+            "Truth-teller rebel",
+            "Spiritual escapist"
+        ],
+        "CAP": [
+            "Cold sexual power",
+            "Discipline as dominance",
+            "Fear of vulnerability"
+        ],
+        "AQU": [
+            "Detached deviant",
+            "Sexual outlier",
+            "Unorthodox desires"
+        ],
+        "PIS": [
+            "Mystical seductress",
+            "Self-erasure for others",
+            "Fantasy-driven rebellion"
+        ]
+    },
+    "part of fortune": {
+        "ARI": [
+            "Thrives in independence",
+            "Finds fortune through bold action",
+            "Success in initiating new ventures"
+        ],
+        "TAU": [
+            "Finds ease in comfort and stability",
+            "Prosperity through patience",
+            "Joy in the material and sensory"
+        ],
+        "GEM": [
+            "Luck in communication",
+            "Success via adaptability",
+            "Joy through learning and sharing ideas"
+        ],
+        "CAN": [
+            "Fortune in nurturing others",
+            "Success through emotional intuition",
+            "Joy rooted in home and family"
+        ],
+        "LEO": [
+            "Shines in leadership",
+            "Finds fortune when expressing creativity",
+            "Draws success through confidence"
+        ],
+        "VIR": [
+            "Success through service and precision",
+            "Finds ease in order",
+            "Fortune in solving problems"
+        ],
+        "LIB": [
+            "Draws fortune through partnerships",
+            "Joy in balance and aesthetics",
+            "Success in diplomacy and fairness"
+        ],
+        "SCO": [
+            "Finds success in transformation",
+            "Joy through intensity",
+            "Fortune when embracing the shadow"
+        ],
+        "SAG": [
+            "Thrives in exploration",
+            "Success through belief systems",
+            "Fortune in teaching and travel"
+        ],
+        "CAP": [
+            "Fortune through discipline",
+            "Joy in achieving goals",
+            "Success in structure and leadership"
+        ],
+        "AQU": [
+            "Success in innovation",
+            "Joy through community and causes",
+            "Finds fortune when thinking ahead"
+        ],
+        "PIS": [
+            "Fortune through intuition and empathy",
+            "Joy in helping the unseen",
+            "Success in imagination and healing"
+        ]
+    },
+    "vertex": {
+        "ARI": [
+            "Draws karmic partners through bold energy",
+            "Fated moments tied to courage",
+            "Destiny activated by taking initiative"
+        ],
+        "TAU": [
+            "Fate moves through comfort and sensuality",
+            "Destined bonds form through stability",
+            "Grounded moments awaken inner values"
+        ],
+        "GEM": [
+            "Destiny through conversation and ideas",
+            "Karmic meetings in learning environments",
+            "Fate linked to curiosity and movement"
+        ],
+        "CAN": [
+            "Fate tied to nurturing and emotion",
+            "Destined events around home and family",
+            "Karmic ties awaken deep feelings"
+        ],
+        "LEO": [
+            "Fated recognition and performance",
+            "Destiny through creativity and self-expression",
+            "Draws destined attention or admiration"
+        ],
+        "VIR": [
+            "Karmic purpose in service and detail",
+            "Fated moments in work or routines",
+            "Destiny through healing and refinement"
+        ],
+        "LIB": [
+            "Destiny activated by partnerships",
+            "Fated meetings bring balance or challenge",
+            "Drawn to karmic love encounters"
+        ],
+        "SCO": [
+            "Fate surfaces through intensity and depth",
+            "Destined transformations shake foundations",
+            "Karmic triggers reveal truth"
+        ],
+        "SAG": [
+            "Destiny through belief and freedom",
+            "Fated journeys or mentors",
+            "Karmic bonds related to expansion and truth"
+        ],
+        "CAP": [
+            "Fate tied to structure and ambition",
+            "Destined meetings in career or authority",
+            "Karmic timing aligns with effort"
+        ],
+        "AQU": [
+            "Karmic encounters via innovation",
+            "Destiny activated in social change",
+            "Fated moments disrupt the norm"
+        ],
+        "PIS": [
+            "Fate arrives through dreams or sacrifice",
+            "Destined connections feel otherworldly",
+            "Karmic bonds through empathy or art"
+        ]
+    },
+    "house7": {
         "ARI": [
             "Needs independence in partnership",
             "Quick to bond",
@@ -431,6 +1113,192 @@
             "Spiritual connection",
             "Romantic",
             "Emotionally deep"
+        ]
+    },
+    "desc": {
+        "ARI": [
+            "Drawn to bold, assertive partners",
+            "Needs directness in relationships",
+            "Attracts initiators and leaders"
+        ],
+        "TAU": [
+            "Seeks stable, sensual partners",
+            "Values loyalty and physical affection",
+            "Attracts grounded companions"
+        ],
+        "GEM": [
+            "Desires mentally stimulating partners",
+            "Seeks variety and humor in relationships",
+            "Attracts talkative and witty people"
+        ],
+        "CAN": [
+            "Wants nurturing, emotionally available partners",
+            "Seeks safety and support",
+            "Drawn to caregivers and homebodies"
+        ],
+        "LEO": [
+            "Attracted to charismatic, expressive partners",
+            "Seeks admiration and loyalty",
+            "Desires warmth and presence"
+        ],
+        "VIR": [
+            "Wants practical, detail-oriented partners",
+            "Drawn to service-minded people",
+            "Seeks order and quiet devotion"
+        ],
+        "LIB": [
+            "Desires harmony-seeking, fair partners",
+            "Attracted to diplomacy and grace",
+            "Seeks romantic balance"
+        ],
+        "SCO": [
+            "Wants deep, transformative relationships",
+            "Attracted to intensity and emotional depth",
+            "Seeks fierce loyalty"
+        ],
+        "SAG": [
+            "Drawn to adventurous, freedom-loving partners",
+            "Needs philosophical alignment",
+            "Wants an exploratory spirit"
+        ],
+        "CAP": [
+            "Seeks responsible, ambitious partners",
+            "Attracted to maturity and structure",
+            "Wants loyalty with vision"
+        ],
+        "AQU": [
+            "Desires unconventional, intellectually driven partners",
+            "Seeks friendship and independence",
+            "Wants to innovate together"
+        ],
+        "PIS": [
+            "Wants compassionate, spiritually attuned partners",
+            "Attracted to empathy and mystique",
+            "Desires emotional merging"
+        ]
+    },
+    "ic": {
+        "ARI": [
+            "Rooted in independence",
+            "Draws strength from action-oriented ancestors",
+            "Finds emotional security through self-direction"
+        ],
+        "TAU": [
+            "Needs physical stability at home",
+            "Roots run deep in tradition",
+            "Draws comfort from sensory environments"
+        ],
+        "GEM": [
+            "Home is a place of ideas and communication",
+            "Emotionally curious ancestry",
+            "Mental stimulation fosters inner peace"
+        ],
+        "CAN": [
+            "Deeply connected to family roots",
+            "Feels safe when emotionally nurtured",
+            "Home is sacred and protective"
+        ],
+        "LEO": [
+            "Needs admiration from family origin",
+            "Proud ancestral roots",
+            "Emotional fulfillment through personal recognition"
+        ],
+        "VIR": [
+            "Emotional roots in service and responsibility",
+            "Draws security from structure and order",
+            "Finds peace in quiet efficiency"
+        ],
+        "LIB": [
+            "Craves balance and peace at home",
+            "Emotional roots in partnership",
+            "Family harmony is foundational"
+        ],
+        "SCO": [
+            "Emotionally intense private life",
+            "Ancestral depth and secrecy",
+            "Security through transformation and rebirth"
+        ],
+        "SAG": [
+            "Wanders in search of emotional truth",
+            "Roots in philosophy or distant lands",
+            "Home is a place of expansion and learning"
+        ],
+        "CAP": [
+            "Emotionally reserved roots",
+            "Duty and legacy are foundations",
+            "Security through achievement and control"
+        ],
+        "AQU": [
+            "Detached from conventional family roles",
+            "Emotional roots in innovation and rebellion",
+            "Feels secure when free and original"
+        ],
+        "PIS": [
+            "Spiritual ancestry and sensitive roots",
+            "Feels safe in imagination and retreat",
+            "Emotionally porous, needs boundaries"
+        ]
+    },
+    "mc": {
+        "ARI": [
+            "Career driven by initiative and leadership",
+            "Thrives in bold, entrepreneurial roles",
+            "Public image: fearless and direct"
+        ],
+        "TAU": [
+            "Values stability and luxury in career",
+            "Builds slowly but steadily toward success",
+            "Public image: dependable and tasteful"
+        ],
+        "GEM": [
+            "Needs variety and mental stimulation in work",
+            "Excels in communication or media careers",
+            "Public image: witty and adaptable"
+        ],
+        "CAN": [
+            "Career may involve nurturing or protection roles",
+            "Values emotional resonance in public impact",
+            "Public image: caring and intuitive"
+        ],
+        "LEO": [
+            "Seeks recognition and leadership",
+            "Thrives in performance or creative roles",
+            "Public image: charismatic and proud"
+        ],
+        "VIR": [
+            "Focused on service, precision, and analysis",
+            "Needs order and purpose in work",
+            "Public image: meticulous and humble"
+        ],
+        "LIB": [
+            "Aims for harmony and beauty in their career",
+            "Thrives in law, design, or diplomacy",
+            "Public image: refined and balanced"
+        ],
+        "SCO": [
+            "Seeks power and transformation through work",
+            "Drawn to depth psychology, finance, or crisis response",
+            "Public image: intense and mysterious"
+        ],
+        "SAG": [
+            "Drawn to teaching, travel, and philosophical careers",
+            "Needs freedom in their public life",
+            "Public image: expansive and idealistic"
+        ],
+        "CAP": [
+            "Goal-oriented and ambitious professionally",
+            "Values legacy and status",
+            "Public image: disciplined and authoritative"
+        ],
+        "AQU": [
+            "Innovative and future-focused in career",
+            "Seeks progressive or unconventional paths",
+            "Public image: visionary and original"
+        ],
+        "PIS": [
+            "Attracted to spiritual, artistic, or healing vocations",
+            "Career may be fluid and emotionally driven",
+            "Public image: compassionate and ethereal"
         ]
     }
 }

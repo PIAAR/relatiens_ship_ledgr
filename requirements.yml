@@ -1,0 +1,14 @@
+name: rel-ledge
+channels:
+     - defaults
+     - conda-forge
+     - 
+dependencies:
+     - python=3.10
+     - pip
+     - pip:
+            - immanuel
+            - geopy==2.4.1
+            - python-dotenv==1.0.1
+            - black==24.3.0
+            - pytest==8.3.5
