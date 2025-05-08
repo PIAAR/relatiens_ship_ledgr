@@ -1,7 +1,7 @@
 # backend/services/zodiac/zodiac.py
 
 from services.zodiac.immanuel_engine import ImmanuelEngine
-from utils.immanuel.zodiac_interpreter import ZodiacInterpreter
+from services.zodiac.zodiac_interpreter import ZodiacInterpreter
 from utils.geocode import get_lat_long
 
 

@@ -104,3 +104,19 @@ class ZodiacInterpreter:
             unwrapped[source_id] = target_unwrapped
         return unwrapped
 
+    def summarize_relationship_profile(self, traits: dict) -> str:
+        """
+        Create a relationship-focused summary based on Sun, Moon, and Ascendant traits.
+        """
+        sun = traits.get("sun", {})
+        moon = traits.get("moon", {})
+        asc = traits.get("asc", {})
+
+        summary = [
+            f"With your **Sun in {sun.get('sign', 'Unknown')}**, you express yourself with {', '.join(sun.get('traits', [])[:2])}.",
+            f"Your **Moon in {moon.get('sign', 'Unknown')}** suggests emotional tendencies like {', '.join(moon.get('traits', [])[:2])}.",
+            f"Rising in **{asc.get('sign', 'Unknown')}** shows you come off as {', '.join(asc.get('traits', [])[:2])}.",
+        ]
+
+        return " ".join(summary)
+
