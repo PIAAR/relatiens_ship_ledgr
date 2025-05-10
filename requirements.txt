@@ -23,12 +23,14 @@ platformdirs==4.3.7
 pluggy==1.5.0
 pydantic==2.11.4
 pydantic_core==2.33.2
+pymongo
 pyswisseph==2.10.3.2
 pytest==8.3.5
 python-dateutil==2.9.0.post0
 python-dotenv==1.1.0
 python-multipart==0.0.20
 pytz==2024.2
+redis
 requests==2.32.3
 requests-cache==1.2.1
 scour==0.38.2
