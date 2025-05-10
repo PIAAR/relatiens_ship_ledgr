@@ -1,7 +1,7 @@
 # backend/main.py
 
 from fastapi import FastAPI
-from routes import dashboard, zodiac_routes, human_design_routes
+from routes import dashboard, zodiac_routes, human_design_routes, mbti_routes
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
@@ -20,9 +20,10 @@ app.add_middleware(
 )
 
 # Register routes
-app.include_router(dashboard.router, prefix="/api")
-app.include_router(zodiac_routes.router, prefix="/api")
-app.include_router(human_design_routes.router, prefix="/api") 
+app.include_router(dashboard.router, prefix="/main")
+app.include_router(zodiac_routes.router, prefix="/analysis")
+app.include_router(human_design_routes.router, prefix="/analysis") 
+app.include_router(mbti_routes.router, prefix="/analysis")
 
 # ✅ Optional entrypoint for direct running
 if __name__ == "__main__":

@@ -33,24 +33,16 @@ class HumanDesignEngine:
 
     def get_chart_data(self):
         try:
-            chart_data = self.api_client.get_chart(
-                self.birth_datetime,
-                self.timezone
-            )
-            return chart_data
+            return self.api_client.get_chart(self.birth_datetime, self.timezone)
         except Exception as e:
             logger.error(f"Failed to fetch chart data: {e}")
             raise RuntimeError("Failed to retrieve Human Design chart data.") from e
 
     def get_composite_data(self, date_a, timezone_a, date_b, timezone_b):
         try:
-            composite_data = self.api_client.get_composite_chart(
-                date_a,
-                timezone_a,
-                date_b,
-                timezone_b
+            return self.api_client.get_composite_chart(
+                date_a, timezone_a, date_b, timezone_b
             )
-            return composite_data
         except Exception as e:
             logger.error(f"Failed to fetch composite chart data: {e}")
             raise RuntimeError("Failed to retrieve Human Design composite data.") from e

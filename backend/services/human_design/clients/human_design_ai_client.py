@@ -1,4 +1,4 @@
-# services/human_design/clients/humandesign_ai_client.py
+# services/human_design/clients/human_design_ai_client.py
 
 import httpx
 from services.human_design.human_design_engine import HumanDesignAPIClient

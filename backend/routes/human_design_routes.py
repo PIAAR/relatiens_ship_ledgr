@@ -1,121 +1,79 @@
-import pytest
-from fastapi.testclient import TestClient
-from main import app
+# routes/human_design_routes.py
 
-client = TestClient(app)
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel, Field
+from datetime import date, time
+from services.human_design.h_design import HumanDesign
+from services.human_design.clients.human_design_ai_client import HumanDesignAiAPIClient
+from config import HUMANDESIGN_API_KEY  # Load from config.py
 
+router = APIRouter(
+    prefix="/human-design",
+    tags=["Human Design"],
+)
 
-def test_get_human_design_report_success(monkeypatch):
-    """
-    Test a successful /human-design/report response with mocked data.
-    """
+# ----- Pydantic Request and Response Models -----
 
-    # Mock HumanDesign.get_report to avoid live API call
-    from services.human_design import h_design
+from pydantic import ConfigDict
 
-    class MockHumanDesign:
-        def get_report(self):
-            return {
+class HumanDesignRequest(BaseModel):
+    birth_date: date = Field(...)
+    birth_time: time = Field(...)
+    location: str = Field(...)
+    timezone: str = Field(...)
+
+    model_config = ConfigDict(
+        json_schema_extra={
+            "examples": [{
                 "birth_date": "1990-01-01",
                 "birth_time": "12:00:00",
                 "location": "New York",
-                "timezone": "America/New_York",
-                "type": "Generator",
-                "authority": "Emotional",
-                "profile": "4/6",
-                "defined_centers": ["Sacral", "Root"],
-                "open_centers": ["Heart", "Head"],
-                "gates": [2, 3, 4],
-                "channels": ["2-14", "3-60"],
-                "summary": "You are a Generator with Emotional authority and a 4/6 profile. Your defined centers are Sacral, Root. Key gates include 2, 3, 4."
-            }
+                "timezone": "America/New_York"
+            }]
+        }
+    )
 
-    monkeypatch.setattr(h_design, "HumanDesign", lambda *args, **kwargs: MockHumanDesign())
+class HumanDesignResponse(BaseModel):
+    birth_date: date
+    birth_time: time
+    location: str
+    timezone: str
+    type: str
+    authority: str
+    profile: str
+    defined_centers: list
+    open_centers: list
+    gates: list
+    channels: list
+    summary: str
 
-    response = client.post("/api/human-design/report", json={
-        "birth_date": "1990-01-01",
-        "birth_time": "12:00:00",
-        "location": "New York",
-        "timezone": "America/New_York"
-    })
-
-    assert response.status_code == 200
-    data = response.json()
-    assert data["type"] == "Generator"
-    assert "summary" in data
-    assert "defined_centers" in data
+# ----- Initialize API Client -----
+api_client = HumanDesignAiAPIClient(HUMANDESIGN_API_KEY)
 
 
-def test_get_human_design_report_validation_error():
-    """
-    Test /human-design/report with invalid request data.
-    """
+# ----- API Endpoints -----
 
-    response = client.post("/api/human-design/report", json={
-        "birth_date": "invalid-date",
-        "birth_time": "12:00:00",
-        "location": "New York",
-        "timezone": "America/New_York"
-    })
+@router.get("/status")
+def get_api_status():
+    return {
+        "status": "ok",
+        "message": "Human Design API is up and running",
+        "monthly_limit": 1000,
+        "calls_made": getattr(api_client, "call_count", 0),
+        "calls_remaining": 1000 - getattr(api_client, "call_count", 0),
+        "reset_date": "2025-06-07",
+    }
 
-    assert response.status_code == 422  # Pydantic validation error
-
-
-def test_get_human_design_report_missing_field():
-    """
-    Test /human-design/report when required fields are missing.
-    """
-
-    response = client.post("/api/human-design/report", json={
-        "birth_date": "1990-01-01",
-        "birth_time": "12:00:00"
-        # missing location, timezone
-    })
-
-    assert response.status_code == 422  # Pydantic validation error
-
-
-def test_get_human_design_usage(monkeypatch):
-    """
-    Test /human-design/usage endpoint returns usage info.
-    """
-
-    from services.human_design.clients import humandesign_ai_client
-
-    mock_client = humandesign_ai_client.HumanDesignAiAPIClient(api_key="dummy")
-    mock_client.call_count = 5
-
-    monkeypatch.setattr(humandesign_ai_client, "api_client", mock_client)
-
-    response = client.get("/api/human-design/usage")
-
-    assert response.status_code == 200
-    data = response.json()
-    assert "monthly_limit" in data
-    assert "calls_made" in data
-    assert "calls_remaining" in data
-    assert "reset_date" in data
-
-
-def test_get_human_design_report_api_limit(monkeypatch):
-    """
-    Test /human-design/report when API call limit is exceeded.
-    """
-
-    from services.human_design import h_design
-
-    class MockHumanDesign:
-        def get_report(self):
-            raise RuntimeError("API call limit reached")
-
-    monkeypatch.setattr(h_design, "HumanDesign", lambda *args, **kwargs: MockHumanDesign())
-
-    response = client.post("/api/human-design/report", json={
-        "birth_date": "1990-01-01",
-        "birth_time": "12:00:00",
-        "location": "New York",
-        "timezone": "America/New_York"
-    })
-
-    assert response.status_code == 500
-    assert "API call limit reached" in response.json()["detail"]
+@router.post("/report", response_model=HumanDesignResponse)
+def get_human_design_report(request: HumanDesignRequest):
+    try:
+        hd = HumanDesign(
+            birth_date=request.birth_date.strftime("%Y-%m-%d"),
+            birth_time=request.birth_time.strftime("%H:%M"),
+            location=request.location,
+            timezone=request.timezone,
+            api_client=api_client
+        )
+        return hd.get_report()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error generating Human Design report: {str(e)}")
