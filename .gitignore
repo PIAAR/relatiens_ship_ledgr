@@ -2,3 +2,4 @@
 backend/services/zodiac/__init__.py
 .env
 backend/.DS_Store
+.env
