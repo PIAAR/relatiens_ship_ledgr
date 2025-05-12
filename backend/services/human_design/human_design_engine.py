@@ -25,7 +25,7 @@ class HumanDesignEngine:
     """
 
     def __init__(self, birth_date, birth_time, latitude, longitude, timezone, api_client=None):
-        self.birth_datetime = datetime.strptime(f"{birth_date} {birth_time}", "%Y-%m-%d %H:%M")
+        self.birth_datetime = datetime.strptime(f"{birth_date} {birth_time}", "%Y-%m-%d %H:%M:%S")
         self.latitude = latitude
         self.longitude = longitude
         self.timezone = timezone

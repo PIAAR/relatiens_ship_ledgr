@@ -6,7 +6,7 @@ from main import app
 client = TestClient(app)
 
 def test_status_endpoint():
-    response = client.get("/api/zodiac/status")
+    response = client.get("/analysis/zodiac/status")
     assert response.status_code == 200
     assert response.json() == {"status": "ok", "message": "Zodiac API is up and running"}
 
@@ -14,10 +14,10 @@ def test_zodiac_report_success():
     payload = {
         "birth_date": "1977-05-05",
         "birth_time": "05:45",
-        "location": "St. Louis, MO"
+        "location": "St. Louis, USA"
     }
-    response = client.post("/api/zodiac/report", json=payload)
-    assert response.status_code == 200
+    response = client.post("/analysis/zodiac/report", json=payload)
+    assert response.status_code == 200, f"Unexpected: {response.status_code} - {response.text}"
     json_data = response.json()
 
     # Check top-level keys
@@ -39,12 +39,10 @@ def test_zodiac_report_success():
     assert isinstance(data["planetary_positions"], dict)
     assert isinstance(data["flat_aspects"], dict)
 
-# ----------------------- Optional Negative Tests ----------------------------#
 def test_zodiac_report_missing_field():
     payload = {
         "birth_date": "1977-05-05",
-        # "birth_time" is optional, but let's break location
-        "location": ""
+        "location": ""  # Invalid location
     }
-    response = client.post("/api/zodiac/report", json=payload)
-    assert response.status_code in (400, 422)  # depending on validation setup
+    response = client.post("/analysis/zodiac/report", json=payload)
+    assert response.status_code in (400, 422)

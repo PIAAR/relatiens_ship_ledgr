@@ -1,31 +1,59 @@
 # services/mbti/mbti_engine.py
 
-from mbti import MBTI
+from services.mbti.question_bank import get_questions
+from services.mbti.scoring_engine import score_mbti
+from services.mbti.analyzer import cognitive_stack, get_summary
+from models.mbti_result import MBTIResult
 from db import mbti_collection
 from datetime import datetime
+from typing import List
 
-def score_mbti_quiz(answers: dict) -> str:
-    """ Map answers to E/I, S/N, T/F, J/P counts and return MBTI type """
-    return answers["E/I"] + answers["S/N"] + answers["T/F"] + answers["J/P"]
+def load_questions(version: int = 40):
+    return get_questions(version)
 
-def analyze_mbti_type(mbti_type: str) -> dict:
-    mbti_obj = MBTI(mbti_type)
-    return {
-        "type": mbti_type,
-        "cognitive_functions": mbti_obj.functions,
-        "trait_tags": list(mbti_obj.dichotomies.values()),
-        "summary": f"{mbti_obj} is known for {mbti_obj.short_description}."
-    }
 
-def save_mbti_result(user_id: str, mbti_type: str, summary: str, source: str = "local", raw_data: dict = None):
-    mbti_collection.insert_one({
-        "user_id": user_id,
-        "mbti_type": mbti_type,
-        "summary": summary,
-        "source": source,
-        "crystal_profile": raw_data or {},
-        "created_at": datetime.utcnow()
-    })
+def process_answers(user_id: str, answers: List[bool], version: int = 40) -> MBTIResult:
+    questions = get_questions(version)
+    mbti_type = score_mbti(questions, answers)
+    summary = get_summary(mbti_type)
+    functions = cognitive_stack(mbti_type)
 
-def get_latest_mbti_result(user_id: str):
-    return mbti_collection.find_one({"user_id": user_id}, sort=[("created_at", -1)])
+    result = MBTIResult(
+        user_id=user_id,
+        mbti_type=mbti_type,
+        cognitive_functions=functions,
+        trait_tags=list(mbti_type),
+        summary=summary,
+        source="local",
+        version=version,
+        created_at=datetime.now().isoformat()
+    )
+
+    save_result(result)
+    return result
+
+
+def save_result(result: MBTIResult):
+    mbti_collection.insert_one(result.dict())
+
+
+def get_latest_result(user_id: str) -> MBTIResult:
+    data = mbti_collection.find_one({"user_id": user_id}, sort=[("created_at", -1)])
+    return MBTIResult(**data) if data else None
+
+
+def get_all_results_for_user(user_id: str) -> List[dict]:
+    return list(mbti_collection.find({"user_id": user_id}).sort("created_at", -1))
+
+
+def analyze_mbti_type(mbti_type: str, user_id: str, source: str = "direct") -> MBTIResult:
+    return MBTIResult(
+        user_id=user_id,
+        mbti_type=mbti_type,
+        cognitive_functions=cognitive_stack(mbti_type),
+        trait_tags=list(mbti_type),
+        summary=get_summary(mbti_type),
+        source=source,
+        version=None,
+        created_at=datetime.now().isoformat()
+    )

@@ -1,37 +1,94 @@
 # routes/mbti_routes.py
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query, Path
+from pydantic import BaseModel
+from datetime import datetime
+from typing import List, Optional, Union
 from services.mbti.clients.crystal_api_client import CrystalAPIClient
-from services.mbti.mbti_engine import score_mbti_quiz, analyze_mbti_type
+from services.mbti.mbti_engine import (
+    load_questions, process_answers, get_latest_result,
+    get_all_results_for_user, analyze_mbti_type, MBTIResult
+)
 
-router = APIRouter()
+router = APIRouter(prefix="/mbti", tags=["MBTI"])
 crystal_client = CrystalAPIClient()
 
-@router.get("/mbti/questions")
-async def get_quiz_questions(premium: bool = False):
+# --- Request Models ---
+class MBTILocalSubmission(BaseModel):
+    user_id: str
+    answers: List[bool]
+    version: Optional[int] = 40
+
+class MBTIPremiumSubmission(BaseModel):
+    first_name: str
+    last_name: str
+    responses: List[dict]
+
+
+# --- ROUTES ---
+
+@router.get("/questions")
+async def get_questions(
+    premium: bool = Query(False),
+    version: int = Query(40)
+):
     if premium:
         return crystal_client.get_assessment_questions()
-    else:
-        # Return your local quiz from file or database
-        return {"questions": [
-            {"id": 1, "text": "Do you gain energy from being around people?", "dimension": "E/I"},
-            {"id": 2, "text": "Do you focus more on facts or ideas?", "dimension": "S/N"},
-            # Add more...
-        ]}
+    return {"questions": load_questions(version)}
 
-@router.post("/mbti/analyze")
-async def analyze_quiz(premium: bool, user_data: dict):
+@router.post("/submit", response_model=MBTIResult)
+async def submit_quiz(
+    user_data: Union[MBTILocalSubmission, MBTIPremiumSubmission],
+    premium: bool = Query(False)
+):
     if premium:
-        crystal_profile = crystal_client.submit_assessment(
-            first_name=user_data["first_name"],
-            last_name=user_data["last_name"],
-            responses=user_data["responses"]
+        if not isinstance(user_data, MBTIPremiumSubmission):
+            raise HTTPException(status_code=400, detail="Missing premium fields.")
+
+        profile = crystal_client.submit_assessment(
+            first_name=user_data.first_name,
+            last_name=user_data.last_name,
+            responses=user_data.responses
         )
-        return {
-            "type": crystal_profile["personalities"]["myers_briggs_type"],
-            "summary": crystal_profile["personalities"]["overview"],
-            "details": crystal_profile["content"]
-        }
-    else:
-        mbti_type = score_mbti_quiz(user_data["answers"])
-        return analyze_mbti_type(mbti_type)
+
+        return MBTIResult(
+            user_id=f"{user_data.first_name}.{user_data.last_name}".lower(),
+            mbti_type=profile["personalities"]["myers_briggs_type"],
+            cognitive_functions=[],
+            trait_tags=[],
+            summary=profile["personalities"]["overview"],
+            source="crystal",
+            crystal_profile=profile["content"],
+            version=40,  # or whatever makes sense
+            created_at=datetime.now().isoformat()
+        )
+
+
+    if not isinstance(user_data, MBTILocalSubmission):
+        raise HTTPException(status_code=400, detail="Missing local quiz data.")
+
+    return process_answers(
+        user_id=user_data.user_id,
+        answers=user_data.answers,
+        version=user_data.version
+    )
+
+@router.get("/result/{user_id}", response_model=MBTIResult)
+async def get_latest_mbti(user_id: str):
+    result = get_latest_result(user_id)
+    if not result:
+        raise HTTPException(status_code=404, detail="No result found.")
+    return result
+
+
+@router.get("/history/{user_id}")
+async def get_all_results(user_id: str):
+    return get_all_results_for_user(user_id)
+
+
+@router.get("/analyze-type/{mbti_type}", response_model=MBTIResult)
+async def analyze_known_type(
+    mbti_type: str = Path(..., min_length=4, max_length=4),
+    user_id: str = Query("anonymous")
+):
+    return analyze_mbti_type(mbti_type, user_id=user_id, source="direct")

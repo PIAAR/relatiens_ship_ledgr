@@ -5,6 +5,10 @@
 # PYTHON ?= $(VENV)/bin/python
 PYTEST ?= pytest
 
+PYTHONPATH=$(pwd)/backend
+
+
+
 # Directories
 TEST_DIR = backend/tests
 UNIT_TESTS = $(TEST_DIR)/unit
@@ -29,13 +33,13 @@ lint:
 	black . && flake8 .
 
 test:
-	$(PYTEST) $(TEST_DIR)
+	PYTHONPATH=backend $(PYTEST) $(TEST_DIR)
 
 unit:
-	$(PYTEST) $(UNIT_TESTS) -v 
+	PYTHONPATH=backend $(PYTEST) $(UNIT_TESTS) -v 
 
 regression:
-	$(PYTEST) $(REGRESSION_TESTS) -v 
+	PYTHONPATH=backend $(PYTEST) $(REGRESSION_TESTS) -v 
 
 clean:
 	find . -type d -name "__pycache__" -exec rm -r {} +

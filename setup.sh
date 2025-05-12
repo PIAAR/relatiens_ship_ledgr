@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # setup.sh — Environment bootstrap and system check for Relationship Ledger
+export PYTHONPATH=$(pwd)/backend
 
 ENV_NAME="rl-env"
 
