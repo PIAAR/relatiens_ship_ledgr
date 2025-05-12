@@ -16,6 +16,34 @@ class ZodiacInterpreter:
     def resolve_object_name(self, obj_id: int) -> str:
         return self.name_map.get("id_to_name_map", {}).get(str(obj_id), f"obj_{obj_id}")
 
+    def ra_to_zodiac(self, ra_degrees: float) -> str:
+        signs = [
+            "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo",
+            "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"
+        ]
+        index = int((ra_degrees % 360) / 30)
+        return signs[index]
+
+    def interpret_skyfield_chart(self, chart_objects: dict) -> dict:
+        report = {}
+
+        for name, data in chart_objects.items():
+            ra = data.get("RA")
+            if ra is None:
+                continue
+
+            sign_name = self.ra_to_zodiac(ra * 15)  # convert RA hours to degrees
+            sign_abbr = sign_name[:3].upper()
+
+            traits = self.get_traits_for(name.lower(), sign_abbr)
+
+            report[name.lower()] = {
+                "sign": sign_name,
+                "traits": traits
+            }
+
+        return report
+
     def get_traits_for(self, object_name: str, sign_abbr: str) -> list[str]:
         key = object_name.lower()
         if key in self.traits and sign_abbr in self.traits[key]:

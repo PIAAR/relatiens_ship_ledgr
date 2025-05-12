@@ -1,0 +1,6 @@
+name: rl-env
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+prefix: /Users/black_mac/miniconda3/envs/rl-env

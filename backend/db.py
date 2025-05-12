@@ -1,7 +1,6 @@
 # backend/db.py
 
 import os
-import redis
 from pymongo import MongoClient, errors
 from config import MONGO_URI, REDIS_URL
 
@@ -14,6 +13,7 @@ try:
     users_collection = mongo_db["users"]
     mbti_collection = mongo_db["mbti_results"]
     quiz_sessions_collection = mongo_db["quiz_sessions"]
+    user_profile_collection = mongo_db["user_profiles"]
     print("[MongoDB] Connected successfully.")
 except errors.ServerSelectionTimeoutError as e:
     print("[MongoDB] Connection failed. Using in-memory fallback.")

@@ -1,6 +1,6 @@
 # backend/services/zodiac/immanuel_engine.py
 
-from immanuel import charts
+from utils.immanuel import charts
 from datetime import datetime
 
 class ImmanuelEngine:

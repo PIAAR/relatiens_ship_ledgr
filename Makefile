@@ -1,12 +1,12 @@
 # Makefile for Relationship Ledger backend
 
 # Default environment
-VENV ?= venv
-PYTHON ?= $(VENV)/bin/python
-PYTEST ?= $(VENV)/bin/pytest
+# VENV ?= venv
+# PYTHON ?= $(VENV)/bin/python
+PYTEST ?= pytest
 
 # Directories
-TEST_DIR = tests
+TEST_DIR = backend/tests
 UNIT_TESTS = $(TEST_DIR)/unit
 REGRESSION_TESTS = $(TEST_DIR)/regression
 
@@ -32,10 +32,10 @@ test:
 	$(PYTEST) $(TEST_DIR)
 
 unit:
-	$(PYTEST) $(UNIT_TESTS)
+	$(PYTEST) $(UNIT_TESTS) -v 
 
 regression:
-	$(PYTEST) $(REGRESSION_TESTS)
+	$(PYTEST) $(REGRESSION_TESTS) -v 
 
 clean:
 	find . -type d -name "__pycache__" -exec rm -r {} +
