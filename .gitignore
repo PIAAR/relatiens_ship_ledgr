@@ -1,5 +1,5 @@
 *.pyc
-backend/services/zodiac/__init__.py
+*/__init__.py
 .env
 backend/.DS_Store
 .env
@@ -27,3 +27,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+de421.bsp
+backend/utils/__init__.py
