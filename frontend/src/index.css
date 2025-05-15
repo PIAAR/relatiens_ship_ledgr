@@ -28,6 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  @apply bg-white text-black dark:bg-gray-900 dark:text-white;
 }
 
 h1 {
