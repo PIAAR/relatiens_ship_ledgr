@@ -1,3 +1,4 @@
+// frontend/src/components/Sidebar.tsx
 import { Link } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 

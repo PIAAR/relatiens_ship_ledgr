@@ -4,6 +4,10 @@ module.exports = {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: ["var(--font-sans)"],
+				serif: ["var(--font-serif)"],
+			},
 			animation: {
 				"bounce-fade": "bounceFade 1s ease-out",
 			},

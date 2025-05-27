@@ -1,3 +1,4 @@
+// frontend/src/pages/HumanDesignPage.tsx
 import HumanDesignForm from "../components/HumanDesignForm";
 import HumanDesignResult from "../components/HumanDesignResult";
 import Spinner from "../components/Spinner";

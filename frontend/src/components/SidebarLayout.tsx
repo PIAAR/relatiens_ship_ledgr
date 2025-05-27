@@ -1,6 +1,8 @@
+// frontend/src/components/SidebarLayout.tsx
 import { Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import BottomNav from "./BottomNav";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
@@ -13,13 +15,13 @@ export default function SidebarLayout() {
 	}, [location.pathname]);
 
 	return (
-		<div className="flex h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
-			{/* Sidebar (desktop) */}
+		<div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
+			{/* Desktop Sidebar - Optional: add fixed sidebar layout later */}
 			<div className="hidden md:block">
 				<Sidebar />
 			</div>
 
-			{/* Sidebar (mobile) */}
+			{/* Mobile Sidebar Drawer */}
 			<div className="md:hidden">
 				{mobileOpen && (
 					<>
@@ -55,9 +57,10 @@ export default function SidebarLayout() {
 			{/* Main Content */}
 			<div className="flex-1 flex flex-col overflow-hidden">
 				<Header />
-				<main className="flex-1 overflow-y-auto p-6">
+				<main className="flex-1 overflow-y-auto p-6 pb-20">
 					<Outlet />
 				</main>
+				<BottomNav />
 			</div>
 		</div>
 	);

@@ -1,21 +1,16 @@
-import { Link, Outlet, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+// frontend/src/components/Layout.tsx
+import { Link, Outlet } from "react-router-dom";
 
 import ThemeToggle from "./ThemeToggle";
+import { useState } from "react";
 
 export default function Layout() {
 	const [menuOpen, setMenuOpen] = useState(false);
-	const location = useLocation();
-
-	// Auto-close menu on route change
-	useEffect(() => {
-		setMenuOpen(false);
-	}, [location.pathname]);
 
 	return (
 		<div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
 			{/* Header */}
-			<header className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-20">
+			<header className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-10">
 				<div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
 					<h1 className="text-xl font-bold">Relationship Ledger</h1>
 
@@ -62,37 +57,29 @@ export default function Layout() {
 						</button>
 					</div>
 				</div>
+
+				{/* Mobile Menu */}
+				{menuOpen && (
+					<div className="md:hidden bg-white dark:bg-gray-800 px-4 pb-4 space-y-2">
+						<Link to="/" className="block" onClick={() => setMenuOpen(false)}>
+							Home
+						</Link>
+						<Link
+							to="/human-design"
+							className="block"
+							onClick={() => setMenuOpen(false)}
+						>
+							Human Design
+						</Link>
+						<div className="pt-2 border-t border-gray-200 dark:border-gray-700">
+							<ThemeToggle />
+						</div>
+					</div>
+				)}
 			</header>
 
-			{/* Side Drawer Menu */}
-			<div
-				className={`fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-800 shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
-					menuOpen ? "translate-x-0" : "-translate-x-full"
-				} md:hidden`}
-			>
-				<div className="p-4 space-y-4 pt-20">
-					<Link to="/" className="block text-lg hover:underline">
-						Home
-					</Link>
-					<Link to="/human-design" className="block text-lg hover:underline">
-						Human Design
-					</Link>
-					<div className="pt-4 border-t border-gray-300 dark:border-gray-600">
-						<ThemeToggle />
-					</div>
-				</div>
-			</div>
-
-			{/* Backdrop */}
-			{menuOpen && (
-				<div
-					onClick={() => setMenuOpen(false)}
-					className="fixed inset-0 bg-black bg-opacity-40 z-30 md:hidden"
-				/>
-			)}
-
-			{/* Page Content */}
-			<main className="max-w-5xl mx-auto p-6 relative z-0">
+			{/* Page content */}
+			<main className="max-w-5xl mx-auto p-6">
 				<Outlet />
 			</main>
 		</div>

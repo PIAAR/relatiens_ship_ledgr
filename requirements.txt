@@ -17,6 +17,7 @@ immanuel==1.4.4
 iniconfig==2.1.0
 jplephem==2.21
 kerykeion==4.26.2
+lucide-react
 mypy_extensions==1.1.0
 mbti-test==0.3.2
 numpy==2.2.5

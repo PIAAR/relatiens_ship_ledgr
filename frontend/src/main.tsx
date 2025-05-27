@@ -1,3 +1,4 @@
+// frontend/src/main.tsx
 import "./index.css";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -13,8 +14,7 @@ const DashboardPage = lazy(() => import("./pages/DashboardPage"));
 const FormsPage = lazy(() => import("./pages/FormsPage"));
 const MbtiTestPage = lazy(() => import("./pages/MbtiTestPage"));
 const CompatibilityTestPage = lazy(() => import("./pages/CompatibilityTestPage"));
-const ZodiacPage = lazy(() => import('./pages/ZodiacPage'));
-
+const ZodiacPage = lazy(() => import("./pages/ZodiacPage"));
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
 	<React.StrictMode>
@@ -25,8 +25,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 						<Route index element={<DashboardPage />} />
 						<Route path="forms" element={<FormsPage />} />
 						<Route path="human-design" element={<HumanDesignPage />} />
-            <Route path="mbti" element={<MbtiTestPage />} />
-            <Route path="zodiac" element={<ZodiacPage />} />
+						<Route path="mbti" element={<MbtiTestPage />} />
+						<Route path="zodiac" element={<ZodiacPage />} />
 						<Route path="compatibility" element={<CompatibilityTestPage />} />
 						<Route path="*" element={<NotFoundPage />} />
 					</Route>
