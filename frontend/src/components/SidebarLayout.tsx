@@ -57,9 +57,12 @@ export default function SidebarLayout() {
 			{/* Main Content */}
 			<div className="flex-1 flex flex-col overflow-hidden">
 				<Header />
-				<main className="flex-1 overflow-y-auto p-6 pb-20">
+				<main className="flex-1 overflow-y-auto p-6 pb-28">
 					<Outlet />
 				</main>
+				{/* Spacer to prevent nav overlap */}
+				<div className="h-16 md:hidden" />
+				<div className="h-[300vh] bg-gradient-to-b from-white to-black" />
 				<BottomNav />
 			</div>
 		</div>

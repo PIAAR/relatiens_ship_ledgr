@@ -21,11 +21,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* Navigation Styles */
+nav {
+  background: rgb(140, 140, 140) !important;
+  position: fixed !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
 
 /* Link Styles */
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #ffe600;
   text-decoration: inherit;
 }
 a:hover {

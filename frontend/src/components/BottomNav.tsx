@@ -1,3 +1,4 @@
+// frontend/src/components/BottomNav.tsx
 import { FileText, Gem, Home, MessageCircle, User } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -13,8 +14,8 @@ export default function BottomNav() {
 	];
 
 	return (
-		<nav className="fixed bottom-0 inset-x-0 z-50 bg-white dark:bg-[#1e1b4b] border-t border-gray-200 dark:border-purple-700 shadow-sm md:hidden">
-			<div className="flex justify-between px-6 py-2">
+		<nav className="fixed bottom-0 inset-x-0 z-80 bg-white dark:bg-[#1e1b4b] border-t border-gray-200 dark:border-purple-700 shadow-md md:hidden">
+			<div className="flex justify-around px-4 py-2">
 				{navItems.map((item) => {
 					const active = location.pathname === item.to;
 					return (
